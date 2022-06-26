@@ -18,7 +18,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    // 在 compilerOptions 内添加如下配置
+    "baseUrl": ".",
+    "paths": {
+      // 注意哦，是 "@/*" 后面的 "/*" 不能少
+        "@/*": [
+            "src/*"
+        ]
+    }
   },
   "include": [
     "src"
